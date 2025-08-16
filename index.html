@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Gorras Bordadas & Beisboleras</title>
+  <meta name="description" content="Gorras bordadas premium, personalización rápida, ediciones limitadas. Compra por WhatsApp o tarjeta." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Gorras Bordadas"/>
+  <meta property="og:description" content="Gorras bordadas premium. Personaliza la tuya. Envíos a toda Colombia."/>
+  <meta property="og:image" content="images/og-image.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://tudominio.com"/>
+
+  <!-- Twitter / Facebook -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Gorras Bordadas"/>
+  <meta name="twitter:description" content="Gorras bordadas premium. Personaliza la tuya. Envíos a toda Colombia."/>
+
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stripe (solo si vas a usar Stripe Checkout) -->
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- Sube tu logo/ reemplaza texto -->
+        <img src="img/logo1.png" alt="Motivación Atómica" class="logo" />
+        <h1>Motivación Atómica</h1>
+      </div>
+      <nav class="nav">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#como-se-hace">Cómo se hace</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#faq">FAQ</a>
+        <a href="#carrito" id="cart-btn">Carrito (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Gorras bordadas premium • Personaliza • Ediciones limitadas</h2>
+          <p>Calidad en materiales y bordado profesional. Envíos a toda Colombia. Compra por WhatsApp o con tarjeta.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#catalogo">Ver catálogo</a>
+            <a class="btn outline" id="cta-whatsapp" href="#">Pedir por WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="img/modelo1.jpg" alt="Gorras Bordadas" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalogo -->
+    <section id="catalogo" class="catalog container">
+      <h3>Catálogo</h3>
+      <p class="lead">Elige tu modelo, color y talla. Stock inicial: 60 gorras (12 por modelo).</p>
+
+      <div id="products-grid" class="grid">
+        <!-- Productos renderizados por JS -->
+      </div>
+    </section>
+
+    <!-- Carrusel -->
+    <section class="catalogo-carrusel">
+      <div class="carrusel" id="carrusel">
+        <!-- Las imágenes se insertarán desde JS -->
+      </div>
+    </section>
+
+    <!-- Carrito modal/section -->
+    <aside id="carrito" class="cart-panel" aria-hidden="true">
+      <div class="cart-inner container">
+        <button class="cart-close" id="close-cart">Cerrar ✕</button>
+        <h4>Tu carrito</h4>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+          <div>Subtotal: <strong id="cart-subtotal">0</strong></div>
+          <div class="cart-actions">
+            <button id="checkout-whatsapp" class="btn primary">Pagar por WhatsApp</button>
+            <button id="checkout-stripe" class="btn outline">Pagar con Tarjeta (Stripe)</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- How it's made -->
+    <section id="como-se-hace" class="how container">
+      <h3>Cómo se hace</h3>
+      <p>Observa nuestro proceso: desde el diseño hasta el bordado final (timelapse).</p>
+      <div style="background:#111; border-radius:18px; padding:2rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+        <div style="flex: 1 1 320px; min-width: 280px;">
+          <iframe src="https://drive.google.com/file/d/1GW9s7I_14BS7EbQukgrjECHNsCa5AFcA/preview" width="100%" height="315" allow="autoplay"></iframe>
+        </div>
+        <div style="flex: 1 1 320px; min-width: 280px; display: flex; flex-direction: column; justify-content: center;">
+          <h4 style="color:hsla(0, 0%, 100%, 0.986); font-size:1.4em; margin-bottom:0.5em;">La historia de la gorra</h4>
+          <p style="font-size:1.1em; color:#eee;">
+            <strong>La primera gorra</strong> nació en 1860 para proteger del sol a los jugadores de béisbol. Desde entonces, evolucionó hasta convertirse en un ícono de moda y expresión personal.<br>
+            <em>Hoy, cada gorra bordada combina tradición, estilo y tecnología, reflejando tu personalidad en cada detalle.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials container">
+      <h3>Testimonios</h3>
+      <div class="test-grid">
+        <blockquote class="test">
+          <p>"La calidad del bordado es impecable. Mi gorra llegó rápido y excelente presentación." — <strong>Andrés</strong></p>
+        </blockquote>
+        <blockquote class="test">
+          <p>"Perfecta para el merchandising del equipo. Todos quedaron encantados." — <strong>Equipo FC</strong></p>
+        </blockquote>
+        <blockquote class="test">
+          <p>"Detalles premium y entrega puntual. Muy recomendados." — <strong>Luisa</strong></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq container">
+      <h3>Preguntas frecuentes</h3>
+      <details>
+        <summary>¿Cuánto demora la personalización?</summary>
+        <p>Normalmente 2–4 días hábiles. En pedidos urgentes podemos acelerar con cargo adicional.</p>
+      </details>
+      <details>
+        <summary>¿Hacen pedidos al por mayor?</summary>
+        <p>Sí. Pedidos por mayor (10+ unidades) tienen descuentos y tiempos de producción ajustados.</p>
+      </details>
+      <details>
+        <summary>¿Qué métodos de pago aceptan?</summary>
+        <p>WhatsApp (transferencia / pago en efectivo a entrega) y paypal.</p>
+      </details>
+    </section>
+
+    <!-- Shipping policy -->
+    <section id="envios" class="shipping container">
+      <h3>Política de envíos</h3>
+      <p>Envíos a todo Colombia vía mensajería. Tiempo estimado: 2–5 días. Costo según destino. Cambios y devoluciones: hasta 7 días si el producto presenta defectos de fabricación.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <img src="img/logo1.png" alt="logo" class="logo-sm"/>
+          <p>Gorras bordadas premium</p>
+        </div>
+        <div>
+          <p>Síguenos:</p>
+          <a href="#" aria-label="Instagram">Instagram</a> • <a href="#" aria-label="Facebook">Facebook</a>
+        </div>
+        <div>
+          <p>Contacto</p>
+          <p><a href="#" id="whatsapp-footer">WhatsApp</a></p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="year"></span> Elysiam. Todos los derechos reservados.</div>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
