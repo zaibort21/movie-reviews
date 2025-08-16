@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoGadgets - Tecnología a tu alcance</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
+    header { background:#111; color:white; padding:20px; text-align:center; }
+    header h1 { margin:0; font-size:2.5em; }
+    header p { margin:5px 0 0; }
+
+    /* Slider */
+    .slider { position: relative; max-width: 100%; margin: auto; overflow: hidden; }
+    .slides { display: flex; transition: transform 1s ease-in-out; }
+    .slides img { width: 100%; border-radius:8px; }
+    .prev, .next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,0.5); color: white; border: none;
+      padding: 10px; cursor: pointer; font-size: 18px;
+    }
+    .prev { left: 10px; } .next { right: 10px; }
+
+    /* Catalogo */
+    section { padding:40px 20px; }
+    h2 { text-align:center; margin-bottom:20px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; }
+    .card { background:white; padding:15px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center; }
+    .card img { width:100%; height:180px; object-fit:cover; border-radius:8px; }
+    .card h3 { margin:10px 0; font-size:1.2em; }
+    .price { color:#008000; font-weight:bold; margin-bottom:10px; }
+    .whatsapp-btn {
+      display:inline-block; background:#25D366; color:white; padding:10px 15px;
+      border-radius:6px; text-decoration:none; font-weight:bold;
+    }
+
+    footer { background:#111; color:white; padding:20px; text-align:center; margin-top:30px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NeoGadgets</h1>
+    <p>La mejor tecnología con pago contraentrega 🚀</p>
+  </header>
+
+  <!-- Slider principal -->
+  <div class="slider">
+    <div class="slides">
+      <img src="https://source.unsplash.com/1200x400/?headphones,tech" alt="Audífonos Bluetooth">
+      <img src="https://source.unsplash.com/1200x400/?charger,tech" alt="Cargador Rápido">
+      <img src="https://source.unsplash.com/1200x400/?speaker,tech" alt="Parlante Portátil">
+      <img src="https://source.unsplash.com/1200x400/?powerbank,tech" alt="Power Bank">
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+
+  <!-- Sección Tecnología -->
+  <section>
+    <h2>Sección de Tecnología</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      Encuentra lo último en audífonos, cargadores, parlantes y power banks.
+      Productos de calidad, con entrega rápida y opción de pago contraentrega por WhatsApp.
+    </p>
+  </section>
+
+  <!-- Catálogo -->
+  <section>
+    <h2>Catálogo</h2>
+
+    <h3>🎧 Audífonos</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?headphones" alt="Audífonos TWS">
+        <h3>Audífonos TWS</h3>
+        <p class="price">$89.900</p>
+        <a class="whatsapp-btn" href="https://wa.me/573115477984?text=Quiero%20comprar%20los%20Audifonos%20TWS">Comprar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?earbuds" alt="Audífonos Gamer">
+        <h3>Audífonos Gamer</h3>
+        <p class="price">$129.900</p>
+        <a class="whatsapp-btn" href="https://wa.me/573115477984?text=Quiero%20comprar%20los%20Audifonos%20Gamer">Comprar por WhatsApp</a>
+      </div>
+    </div>
+
+    <h3>🔌 Cargadores</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?charger" alt="Cargador 20W">
+        <h3>Cargador 20W</h3>
+        <p class="price">$59.900</p>
+        <a class="whatsapp-btn" href="https://wa.me/573115477984?text=Quiero%20comprar%20el%20Cargador%2020W">Comprar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?usb" alt="Hub USB-C">
+        <h3>Hub USB-C 5 en 1</h3>
+        <p class="price">$119.900</p>
+        <a class="whatsapp-btn" href="https://wa.me/573115477984?text=Quiero%20comprar%20el%20Hub%20USB-C">Comprar por WhatsApp</a>
+      </div>
+    </div>
+
+    <h3>🔊 Parlantes</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?speaker" alt="Parlante Bluetooth">
+        <h3>Parlante Bluetooth</h3>
+        <p class="price">$149.900</p>
+        <a class="whatsapp-btn" href="https://wa.me/573115477984?text=Quiero%20comprar%20el%20Parlante%20Bluetooth">Comprar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?portable-speaker" alt="Parlante Mini">
+        <h3>Parlante Mini</h3>
+        <p class="price">$79.900</p>
+        <a class="whatsapp-btn" href="https://wa.me/573115477984?text=Quiero%20comprar%20el%20Parlante%20Mini">Comprar por WhatsApp</a>
+      </div>
+    </div>
+
+    <h3>🔋 Power Banks</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?powerbank" alt="Power Bank 10000mAh">
+        <h3>Power Bank 10000mAh</h3>
+        <p class="price">$99.900</p>
+        <a class="whatsapp-btn" href="https://wa.me/573115477984?text=Quiero%20comprar%20el%20PowerBank%2010000mAh">Comprar por WhatsApp</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?battery" alt="Power Bank Solar">
+        <h3>Power Bank Solar</h3>
+        <p class="price">$139.900</p>
+        <a class="whatsapp-btn" href="https://wa.me/573115477984?text=Quiero%20comprar%20el%20PowerBank%20Solar">Comprar por WhatsApp</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 NeoGadgets | Pagos contraentrega 📦 | Integrado con Effi 🚀</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelector(".slides");
+    const totalSlides = slides.children.length;
+
+    function moveSlide(step) {
+      slideIndex = (slideIndex + step + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    setInterval(() => moveSlide(1), 4000);
+  </script>
+</body>
+</html>
